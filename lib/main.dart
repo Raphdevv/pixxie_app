@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'pixxie',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
       home: const MainPage(),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pixxie/constant/colors.dart';
 import 'package:pixxie/pages/home/home_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -25,10 +26,10 @@ class _MainPageState extends State<MainPage> {
         backgroundColor: Colors.white,
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: selectedIndex == 0
-              ? const Color(0xFFF4AB38)
+              ? ColorsConst.primaryColor_2
               : selectedIndex == 1
-                  ? const Color(0xFF00C0B0)
-                  : const Color(0xFFFA4990),
+                  ? ColorsConst.primaryColor_3
+                  : ColorsConst.primaryColor_4,
           backgroundColor: Colors.white,
           elevation: 10,
           items: const [

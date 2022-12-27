@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pixxie/pages/home/home_page_feed.dart';
 
+import '../../constant/colors.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -18,9 +20,9 @@ class HomePage extends StatelessWidget {
           ),
           centerTitle: true,
           bottom: const TabBar(
-            labelColor: Color(0xFFFA4990),
-            indicatorColor: Color(0xFF00C0B0),
-            unselectedLabelColor: Color(0xFF1A1A1A),
+            labelColor: ColorsConst.primaryColor_4,
+            indicatorColor: ColorsConst.primaryColor_3,
+            unselectedLabelColor: ColorsConst.primaryColor_1,
             tabs: [
               Tab(
                 text: "Feed",
@@ -39,10 +41,7 @@ class HomePage extends StatelessWidget {
         ),
         body: const TabBarView(
           children: [
-            Padding(
-              padding: EdgeInsets.all(12.0),
-              child: HomePageFeed(),
-            ),
+            HomePageFeed(),
             Text('2'),
             Text('3'),
             Text('4'),
