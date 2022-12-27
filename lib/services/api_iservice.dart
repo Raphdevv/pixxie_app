@@ -21,6 +21,7 @@ class APiservice {
       if (response.statusCode == 200) {
         post =
             response.data.map<PostModel>((e) => PostModel.fromJson(e)).toList();
+        print("${post.where((element) => element.id == 101).toList()}");
         _getallPost.sink.add(post);
         if (kDebugMode) {
           print('Successful!');
@@ -28,6 +29,29 @@ class APiservice {
       } else {
         if (kDebugMode) {
           print("Failed to load.");
+        }
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print('That\'s error $e');
+      }
+    }
+  }
+
+  addpost(String text) async {
+    try {
+      var response = await _dio.post(
+        'https://jsonplaceholder.typicode.com/posts',
+        data: {
+          'userId': 1,
+          'title': "มาเบลเอง",
+          'body': text,
+        },
+      );
+      print(response);
+      if (response.statusCode == 201) {
+        if (kDebugMode) {
+          print("Add Post !");
         }
       }
     } catch (e) {
