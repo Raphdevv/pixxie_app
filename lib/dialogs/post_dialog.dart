@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pixxie/constant/colors.dart';
+import 'package:pixxie/pages/home/home_page.dart';
+import 'package:pixxie/pages/main_page.dart';
 
 import '../services/api_iservice.dart';
 
@@ -32,16 +34,16 @@ class _PostDialogState extends State<PostDialog> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: FractionallySizedBox(
+        heightFactor: 0.9,
         child: Scaffold(
           appBar: appBarCreatePost(context),
-          body: Column(
-            children: [
-              const Divider(
-                color: ColorsConst.primaryColor_1,
-              ),
-              profileUser(),
-              fieldTyping(),
-            ],
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                profileUser(),
+                fieldTyping(),
+              ],
+            ),
           ),
         ),
       ),
@@ -133,6 +135,12 @@ class _PostDialogState extends State<PostDialog> {
             onPressed: () {
               if (text != null) {
                 APiservice().addpost(text!);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainPage(),
+                  ),
+                );
               }
             },
             child: const Text("Post"),
