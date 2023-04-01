@@ -16,16 +16,16 @@ class _HomePageFeedState extends State<HomePageFeed> {
   late APiservice _apiService;
 
   List a = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
+    'mmabelz',
+    'pimafestival',
+    'ihngko',
+    'dada',
+    'didi',
+    'karina',
+    'giselle',
+    'ningning',
+    'winter',
+    'ally',
   ];
 
   @override
@@ -86,7 +86,7 @@ class _HomePageFeedState extends State<HomePageFeed> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(100),
                       child: Image.asset(
-                        'assets/images/1.jpg',
+                        'assets/images/3.jpg',
                         height: 500,
                         width: 500,
                         fit: BoxFit.cover,
@@ -143,9 +143,9 @@ class _HomePageFeedState extends State<HomePageFeed> {
             children: [
               ListTile(
                 contentPadding: EdgeInsets.zero,
-                leading: CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  child: Image.asset('assets/logo/ic_pixxie.png'),
+                leading: const CircleAvatar(
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage('assets/images/4.jpg'),
                 ),
                 title: Text(a[postData.userId - 1]),
                 subtitle: const Text("26/12/2022 15:51 น."),

@@ -25,16 +25,14 @@ class HomePage extends StatelessWidget {
             unselectedLabelColor: ColorsConst.primaryColor_1,
             tabs: [
               Tab(
-                text: "Feed",
+                text: "ฟีด",
+              ),
+              Tab(text: "ศิลปิน"),
+              Tab(
+                text: "ไลฟ์",
               ),
               Tab(
-                text: "Artist",
-              ),
-              Tab(
-                text: "Live",
-              ),
-              Tab(
-                text: "Musical",
+                text: "เพลง",
               ),
             ],
           ),

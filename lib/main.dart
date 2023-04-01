@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'pixxie',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'MN MOCHI.ttf',
         primarySwatch: Colors.pink,
       ),
       home: const MainPage(),

@@ -9,7 +9,7 @@ class DialogTypePost {
   open() {
     showModalBottomSheet(
       isScrollControlled: true,
-      enableDrag: true,
+      enableDrag: false,
       context: context,
       builder: (context) {
         return const PostDialog();
@@ -32,6 +32,7 @@ class _PostDialogState extends State<PostDialog> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: FractionallySizedBox(
+        heightFactor: 0.9,
         child: Scaffold(
           appBar: appBarCreatePost(context),
           body: Column(
@@ -77,7 +78,7 @@ class _PostDialogState extends State<PostDialog> {
       decoration: BoxDecoration(color: Colors.grey[200]),
       child: ListTile(
         leading: const CircleAvatar(
-          backgroundImage: AssetImage('assets/images/4.jpg'),
+          backgroundImage: AssetImage('assets/images/6.jpg'),
         ),
         title: const Text("mmabelz"),
         subtitle: Row(
@@ -133,6 +134,7 @@ class _PostDialogState extends State<PostDialog> {
             onPressed: () {
               if (text != null) {
                 APiservice().addpost(text!);
+                Navigator.of(context).pop();
               }
             },
             child: const Text("Post"),
