@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pixxie/pages/home/home_page_feed.dart';
+import 'package:pixxie/pages/musical/musical_page.dart';
 
 import '../../constant/colors.dart';
 
@@ -42,7 +43,7 @@ class HomePage extends StatelessWidget {
             HomePageFeed(),
             Text('2'),
             Text('3'),
-            Text('4'),
+            MusicalPage(),
           ],
         ),
       ),

@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:pixxie/models/post_model.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -60,4 +62,19 @@ class APiservice {
       }
     }
   }
+
+  // bluttooth() async {
+  //   var status = await Permission.bluetoothConnect.status;
+  //   if (status.isDenied) {
+  //     print('if');
+  //     Permission.bluetoothConnect.request();
+  //   } else {
+  //     print('else');
+  //     FlutterBluetoothSerial.instance
+  //         .getBondedDevices()
+  //         .then((List<BluetoothDevice> bondedDevices) {
+  //       print('ddddd ${bondedDevices}');
+  //     });
+  //   }
+  // }
 }
